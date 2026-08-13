@@ -11,19 +11,31 @@ Native SwiftUI merchant application for iPhone and iPad.
 ## Open the project
 
 ```bash
-open ios/TropaymentMerchant/TropaymentMerchant.xcodeproj
+cd TropaymentMerchant
+open TropaymentMerchant.xcodeproj
 ```
 
 Or double-click `TropaymentMerchant.xcodeproj` in Finder.
 
-## Build
+## Build (local macOS)
 
 ```bash
-cd ios/TropaymentMerchant
-xcodebuild -scheme TropaymentMerchant -destination 'platform=iOS Simulator,name=iPhone 16' build
+cd TropaymentMerchant
+xcodebuild \
+  -project TropaymentMerchant.xcodeproj \
+  -scheme TropaymentMerchant \
+  -sdk iphonesimulator \
+  -destination 'generic/platform=iOS Simulator' \
+  CODE_SIGNING_ALLOWED=NO \
+  CODE_SIGNING_REQUIRED=NO \
+  build
 ```
 
 Set your **Development Team** in Signing & Capabilities before running on a physical device.
+
+## CI (GitHub Actions)
+
+Pushes to `main` run a real `xcodebuild` on `macos-15` with **Xcode 16.4** — see [`.github/workflows/ios-build.yml`](../.github/workflows/ios-build.yml).
 
 ## Configuration
 
@@ -35,7 +47,7 @@ Set your **Development Team** in Signing & Capabilities before running on a phys
 
 Authentication uses **Laravel Sanctum** Bearer tokens stored in the **Keychain**.
 
-See [`../../others/mobile/IOS_API_REQUIREMENTS.md`](../../others/mobile/IOS_API_REQUIREMENTS.md) for API details.
+See [`IOS_API_REQUIREMENTS.md`](IOS_API_REQUIREMENTS.md) if present, or the main tropayment docs repo.
 
 ## Phase 1 (current)
 
@@ -57,4 +69,4 @@ python3 generate_xcode_project.py
 ## Notes
 
 - This is **not** a WebView wrapper — all primary UI is SwiftUI.
-- Build verification requires macOS; the repo was scaffolded on Windows and must be built on a Mac with Xcode.
+- Windows developers: rely on GitHub Actions for compile verification.
