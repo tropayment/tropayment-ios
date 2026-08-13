@@ -18,8 +18,8 @@ final class AppSession: ObservableObject {
 
     private var unauthorizedObserver: NSObjectProtocol?
 
-    init(authService: AuthService = AuthService(), keychain: KeychainManager = .shared) {
-        self.authService = authService
+    init(authService: AuthService? = nil, keychain: KeychainManager = .shared) {
+        self.authService = authService ?? AuthService()
         self.keychain = keychain
         unauthorizedObserver = NotificationCenter.default.addObserver(
             forName: .apiUnauthorized,

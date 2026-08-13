@@ -19,8 +19,8 @@ final class AuthViewModel: ObservableObject {
     private let session: AppSession
     private let keychain: KeychainManager
 
-    init(authService: AuthService = AuthService(), session: AppSession, keychain: KeychainManager = .shared) {
-        self.authService = authService
+    init(authService: AuthService? = nil, session: AppSession, keychain: KeychainManager = .shared) {
+        self.authService = authService ?? AuthService()
         self.session = session
         self.keychain = keychain
     }

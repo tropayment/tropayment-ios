@@ -5,8 +5,8 @@ final class AuthService {
     private let client: APIClient
     private let keychain: KeychainManager
 
-    init(client: APIClient = .shared, keychain: KeychainManager = .shared) {
-        self.client = client
+    init(client: APIClient? = nil, keychain: KeychainManager = .shared) {
+        self.client = client ?? APIClient.shared
         self.keychain = keychain
     }
 
