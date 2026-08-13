@@ -1,0 +1,218 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "app.name" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "tropayment Merchant" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "tropayment Merchant" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "tropayment Merchant" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "tropayment Merchant" } }
+      }
+    },
+    "auth.subtitle" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "بوابة الدفع للتجار" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Crypto payment gateway for merchants" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "가맹점용 암호화폐 결제 게이트웨이" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "商户加密货币支付网关" } }
+      }
+    },
+    "auth.sign_in" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تسجيل الدخول" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sign In" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "로그인" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "登录" } }
+      }
+    },
+    "auth.sign_out" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تسجيل الخروج" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sign Out" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "로그아웃" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "退出登录" } }
+      }
+    },
+    "auth.email" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "البريد الإلكتروني" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Email" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이메일" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "邮箱" } }
+      }
+    },
+    "auth.password" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "كلمة المرور" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Password" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "비밀번호" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "密码" } }
+      }
+    },
+    "auth.forgot_password" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "نسيت كلمة المرور؟" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Forgot password?" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "비밀번호를 잊으셨나요?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "忘记密码？" } }
+      }
+    },
+    "auth.forgot_password_title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Reset your password" } }
+      }
+    },
+    "auth.forgot_password_message" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter your merchant account email and we will send a reset link." } }
+      }
+    },
+    "auth.send_reset_link" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Send reset link" } }
+      }
+    },
+    "auth.reset_email_sent" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Check your inbox" } }
+      }
+    },
+    "auth.two_factor_title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Two-factor authentication" } }
+      }
+    },
+    "auth.two_factor_message" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter the 6-digit code from your authenticator app." } }
+      }
+    },
+    "auth.verification_code" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Verification code" } }
+      }
+    },
+    "auth.verify" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Verify" } }
+      }
+    },
+    "auth.back_to_login" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Back to login" } }
+      }
+    },
+    "auth.captcha_notice" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Additional verification may be required after multiple failed attempts." } }
+      }
+    },
+    "auth.error.email_required" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Email is required." } }
+      }
+    },
+    "auth.error.password_required" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Password is required." } }
+      }
+    },
+    "auth.error.code_length" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter a 6-digit code." } }
+      }
+    },
+    "common.loading" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Loading…" } }
+      }
+    },
+    "common.launching" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Starting…" } }
+      }
+    },
+    "common.try_again" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Try again" } }
+      }
+    },
+    "common.close" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Close" } }
+      }
+    },
+    "common.cancel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancel" } }
+      }
+    },
+    "tab.dashboard" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dashboard" } }
+      }
+    },
+    "tab.payments" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Payments" } }
+      }
+    },
+    "tab.transactions" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Transactions" } }
+      }
+    },
+    "tab.wallet" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Wallet" } }
+      }
+    },
+    "tab.settings" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings" } }
+      }
+    },
+    "placeholder.coming_phase_3" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dashboard will be available in Phase 3." } }
+      }
+    },
+    "placeholder.coming_phase_4" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Invoices and payments will be available in Phase 4." } }
+      }
+    },
+    "placeholder.coming_phase_6" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Transaction history will be available in Phase 6." } }
+      }
+    },
+    "placeholder.coming_phase_7" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Wallet balances will be available in Phase 7." } }
+      }
+    },
+    "status.pending" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Pending" } } } },
+    "status.confirming" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Confirming" } } } },
+    "status.paid" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Paid" } } } },
+    "status.expired" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Expired" } } } },
+    "status.cancelled" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancelled" } } } },
+    "status.failed" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Failed" } } } },
+    "status.neutral" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Status" } } } },
+    "error.invalid_url" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Invalid request URL." } } } },
+    "error.no_data" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "No data received." } } } },
+    "error.decoding_failed" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Could not read server response." } } } },
+    "error.timeout" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Request timed out." } } } },
+    "error.unauthorized" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Session expired. Please sign in again." } } } },
+    "error.forbidden" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "You do not have permission to perform this action." } } } },
+    "error.validation" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Please check your input." } } } },
+    "error.rate_limited" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Too many requests. Please wait and try again." } } } },
+    "error.maintenance" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Service is under maintenance." } } } },
+    "error.server" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Server error. Please try again later." } } } },
+    "error.unknown" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Something went wrong." } } } },
+    "error.network" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Network connection failed." } } } },
+    "error.session_expired" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Your session has expired." } } } },
+    "error.missing_token" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Authentication token missing." } } } }
+  },
+  "version" : "1.0"
+}
