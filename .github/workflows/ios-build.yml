@@ -58,10 +58,12 @@ jobs:
             CODE_SIGNING_ENTITLEMENTS="" \
             2>&1 | tee xcodebuild.log
 
-      - name: Print last 200 lines of xcodebuild log on failure
+      - name: Print compile errors on failure
         if: failure()
         run: |
           echo "=== xcodebuild errors ==="
-          grep -E 'error:|fatal error:' xcodebuild.log || true
+          grep -E 'error:|fatal error:' xcodebuild.log | head -80 | while IFS= read -r line; do
+            echo "::error::$line"
+          done || true
           echo "=== last 200 lines ==="
           tail -n 200 xcodebuild.log

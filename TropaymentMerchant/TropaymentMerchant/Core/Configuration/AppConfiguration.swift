@@ -47,7 +47,10 @@ struct AppConfiguration {
 
     /// BCP-47 language code for `Accept-Language` header.
     var acceptLanguageCode: String {
-        Locale.current.language.languageCode?.identifier ?? "en"
+        if let code = Locale.preferredLanguages.first?.split(separator: "-").first {
+            return String(code)
+        }
+        return "en"
     }
 
     var websiteURL: URL {

@@ -20,9 +20,9 @@ struct TropaymentTextField: View {
 
             Group {
                 if isSecure {
-                    SecureField(String(localized: title), text: $text)
+                    SecureField(title, text: $text)
                 } else {
-                    TextField(String(localized: title), text: $text, prompt: prompt.map { Text($0) })
+                    TextField(title, text: $text, prompt: prompt.map { Text($0) })
                         .keyboardType(keyboardType)
                         .textContentType(textContentType)
                         .textInputAutocapitalization(.never)
