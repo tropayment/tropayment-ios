@@ -8,7 +8,7 @@ enum APIError: LocalizedError, Equatable {
     case timeout
     case unauthorized
     case forbidden(message: String, kycRequired: Bool)
-    case validation(message: String, fieldErrors: [String: [String]], requiresCaptcha: Bool = false)
+    case validation(message: String, fieldErrors: [String: [String]], requiresCaptcha: Bool)
     case rateLimited(retryAfter: Int?)
     case maintenance(message: String)
     case serverError(statusCode: Int, message: String)
@@ -34,7 +34,7 @@ enum APIError: LocalizedError, Equatable {
             return String(localized: "error.unauthorized")
         case .forbidden(let message, _):
             return message
-        case .validation(let message, _):
+        case .validation(let message, _, _):
             return message
         case .rateLimited:
             return String(localized: "error.rate_limited")
@@ -48,8 +48,33 @@ enum APIError: LocalizedError, Equatable {
     }
 
     var fieldErrors: [String: [String]] {
-        if case .validation(_, let errors) = self { return errors }
+        if case .validation(_, let errors, _) = self { return errors }
         return [:]
+    }
+
+    static func == (lhs: APIError, rhs: APIError) -> Bool {
+        switch (lhs, rhs) {
+        case (.invalidURL, .invalidURL), (.noData, .noData), (.timeout, .timeout), (.unauthorized, .unauthorized):
+            return true
+        case (.decodingFailed(let a), .decodingFailed(let b)):
+            return a == b
+        case (.network(let a), .network(let b)):
+            return a == b
+        case (.forbidden(let m1, let k1), .forbidden(let m2, let k2)):
+            return m1 == m2 && k1 == k2
+        case (.validation(let m1, let e1, let c1), .validation(let m2, let e2, let c2)):
+            return m1 == m2 && e1 == e2 && c1 == c2
+        case (.rateLimited(let a), .rateLimited(let b)):
+            return a == b
+        case (.maintenance(let a), .maintenance(let b)):
+            return a == b
+        case (.serverError(let c1, let m1), .serverError(let c2, let m2)):
+            return c1 == c2 && m1 == m2
+        case (.unknown(let c1, let m1), .unknown(let c2, let m2)):
+            return c1 == c2 && m1 == m2
+        default:
+            return false
+        }
     }
 
     var isUnauthorized: Bool {

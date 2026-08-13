@@ -44,7 +44,7 @@ jobs:
 
       - name: Build for iOS Simulator (no code signing)
         run: |
-          set -euo pipefail
+          set -o pipefail
           xcodebuild build \
             -project TropaymentMerchant.xcodeproj \
             -scheme TropaymentMerchant \
@@ -55,4 +55,9 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_ENTITLEMENTS=""
+            CODE_SIGNING_ENTITLEMENTS="" \
+            2>&1 | tee xcodebuild.log
+
+      - name: Print last 200 lines of xcodebuild log on failure
+        if: failure()
+        run: tail -n 200 xcodebuild.log

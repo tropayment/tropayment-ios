@@ -91,7 +91,7 @@ final class AppSession: ObservableObject {
 
     func completeLogin(response: LoginResponse) throws {
         guard let token = response.token, !token.isEmpty else {
-            throw APIError.validation(message: String(localized: "error.missing_token"), fieldErrors: [:])
+            throw APIError.validation(message: String(localized: "error.missing_token"), fieldErrors: [:], requiresCaptcha: false)
         }
         try authService.persistToken(token, kind: .session)
         keychain.clearPendingTwoFactor()
