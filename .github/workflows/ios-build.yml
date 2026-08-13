@@ -60,4 +60,8 @@ jobs:
 
       - name: Print last 200 lines of xcodebuild log on failure
         if: failure()
-        run: tail -n 200 xcodebuild.log
+        run: |
+          echo "=== xcodebuild errors ==="
+          grep -E 'error:|fatal error:' xcodebuild.log || true
+          echo "=== last 200 lines ==="
+          tail -n 200 xcodebuild.log
